@@ -58,7 +58,7 @@ var promptCustomer = function(res){
                             makeTable();
                         })
                     } else {
-                        console.log("That is not a valid selection.");
+                        console.log("Sorry. We don't have enough in stock.");
                         promptCustomer(res);
                     }
                 })
