@@ -37,7 +37,7 @@ If the product is available, the app will ask the customer the quantity they'd l
 
 
 
-If the requested quantity is greater than the available stock, the app will let the customer know that the store does not have enough inventory for their requested amount.
+If the requested quantity is greater than the available stock, the app will let the customer know that the store does not have enough inventory to cover their requested amount.
 
    ![not-enough-stock](media/not-enough-stock.gif)
 
@@ -64,9 +64,6 @@ The user may leave the store by pressing "Q".
 * Configure a Node.js application to connect to a MySQL instance
 * Create and drop databases and tables 
 * Explain and execute CRUD methods
-* Use both a GUI and the MySQL command prompt to interface with a database
-* Create schema and seed files for development and production
-* Write join statements to establish relations between data in one or more tables
 
 - - -
 
