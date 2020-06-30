@@ -1,23 +1,27 @@
 {
-  "name": "bamazon",
+  "name": "nabootique",
   "version": "1.0.0",
   "description": "UTA-VIRT-FSF-PT-01-2020-U-LOL Homework #12",
-  "main": "bamazon.js",
+  "main": "nabootique.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashleyallphin/bamazon.git"
+    "url": "git+https://github.com/ashleyallphin/nabootique.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ashleyallphin/bamazon/issues"
+    "url": "https://github.com/ashleyallphin/nabootique/issues"
   },
-  "homepage": "https://github.com/ashleyallphin/bamazon#readme",
+  "homepage": "https://github.com/ashleyallphin/nabootique#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "inquirer": "^7.1.0",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "colors-cli": "^1.0.27"
   }
 }
