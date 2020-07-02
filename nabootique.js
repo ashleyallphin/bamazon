@@ -50,6 +50,9 @@ var promptCustomer = function(res){
     }]).then(function(answer){
         var correct = false;
         if(answer.choice.toUpperCase()=="Q"){
+            process.on('exit', function(code) {
+                return console.log(`\nThank you for shopping at the Nabootique! Please come again.\n`.x202.bold);
+            });
             process.exit();
         }
         for (var i=0; i<res.length; i++){
@@ -73,18 +76,18 @@ var promptCustomer = function(res){
                 }).then(function(answer){
                     if((res[id].stock_quantity-answer.quantity)>0){
                         connection.query("UPDATE products SET stock_quantity='"+(res[id].stock_quantity-answer.quantity)+" ' WHERE product_name='"+product+"'", function(err,res2){
-                            console.log(`\n\⮑`.x226 + `  Alright! Congratulations on your purchase!\n`.x34);
+                            console.log(`\n\⮑`.x34 + `  Alright! Congratulations on your purchase!\n`.x34);
                             renderProducts();
                         })
                     } else {
-                        console.log(`\n\⮑`.x226 + `  Sorry. We do not have enough in stock to fulfill your reqeust.`.x160);
+                        console.log(`\n\⮑`.x160 + `  Sorry. We do not have enough in stock to fulfill your reqeust.`.x160);
                         promptCustomer(res);
                     }
                 })
             }
         }
     if(i==res.length && correct==false){
-        console.log(`\n\⮑`.x226 + `  Sorry. We do not carry that item.`.x160);
+        console.log(`\n\⮑`.x160 + `  Sorry. We do not carry that item.`.x160);
         promptCustomer(res);
     }
     })
